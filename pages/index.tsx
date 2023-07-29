@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import Head from "next/head";
+// import Head from "next/head";
 import Image from "next/image";
 import {
   FaSuitcase,
@@ -12,24 +12,30 @@ import {
   FaLightbulb,
   FaSpotify,
 } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "../components/LanguageSwitcher.js";
 
 const Home: NextPage = () => {
+  const { t } = useTranslation();
+
   return (
-    <body className="container min-h-screen max-w-full">
+    <div className="container min-h-screen max-w-full">
       <nav className="flex justify-between p-2 sticky top-0 left-0 z-10 bg-gray-900 opacity-60 backdrop:blur-3xl">
         <form className="w-11 h-11 rounded-md flex items-center hover:bg-gray-700">
           <button className="hover:bg-gray-700 flex items-center gap-1 mx-auto">
             <FaLightbulb />
           </button>
         </form>
-        <form className="w-11 h-11 rounded-md flex items-center hover:bg-gray-700">
-          <button className="hover:bg-gray-700 flex items-center gap-1 mx-auto">
-            <FaGlobe />
-            <p>E</p>
-          </button>
-        </form>
+        <div className="w-11 h-11 rounded-md flex items-center hover:bg-gray-700">
+          <div className="hover:bg-gray-700 flex items-center gap-1 mx-auto">
+            {/* <FaGlobe /> */}
+            <LanguageSwitcher />
+          </div>
+        </div>
       </nav>
-
+      <LanguageSwitcher />
+      <h1>{t("welcome")}</h1>
+      <p>{t("hello", { name: "John" })}</p>
       <header className="w-[724px] max-w-full mx-auto">
         <div className="w-full aspect-[3/1] bg-gray-700"></div>
         <div className="w-[610px] max-w-full mx-auto grid gap-2 px-4">
@@ -158,7 +164,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </footer>
-    </body>
+    </div>
   );
 };
 

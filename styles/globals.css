@@ -7,3 +7,12 @@ body {
   @apply text-slate-50;
   @apply text-sm;
 }
+select {
+  @apply bg-transparent;
+}
+
+option {
+  @apply bg-transparent;
+  @apply bg-none;
+  @apply text-black;
+}
