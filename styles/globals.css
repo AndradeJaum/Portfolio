@@ -12,7 +12,5 @@ select {
 }
 
 option {
-  @apply bg-transparent;
-  @apply bg-none;
   @apply text-black;
 }
