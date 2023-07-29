@@ -14,16 +14,25 @@ import {
 } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "../components/LanguageSwitcher.js";
+import { useState } from "react";
+import About from "../components/About.js";
+import Work from "../components/Work.js";
 
 const Home: NextPage = () => {
+  const [activeSection, setActiveSection] = useState("about");
+
   const { t } = useTranslation();
+
+  const handleSectionClick = (section: string) => {
+    setActiveSection(section);
+  };
 
   return (
     <div className="container min-h-screen max-w-full">
       <nav className="flex justify-between p-2 sticky top-0 left-0 z-10 bg-gray-900 opacity-60 backdrop:blur-3xl">
         <form className="w-11 h-11 rounded-md flex items-center hover:bg-gray-700">
           <button className="hover:bg-gray-700 flex items-center gap-1 mx-auto">
-            <FaLightbulb size={20}/>
+            <FaLightbulb size={20} />
           </button>
         </form>
         <div className="w-11 h-11 rounded-md flex items-center hover:bg-gray-700">
@@ -53,7 +62,7 @@ const Home: NextPage = () => {
               className="border-transparent outline-transparent rounded-full flex gap-x-1 items-center text-white px-4 py-2 bg-yellow-500"
             >
               <span className="font-bold">Follow</span>
-              <FaLinkedin size={20}/>
+              <FaLinkedin size={20} />
             </a>
           </div>
           <h1 className="font-bold text-4xl">João Vitor de Andrade</h1>
@@ -95,13 +104,23 @@ const Home: NextPage = () => {
         </div>
         <div className="w-[610px] max-w-full mx-auto my-12 text-base">
           <div className="max-w-full grid grid-flow-col auto-cols-[1fr] items-center text-gray-600">
-            <button className="font-bold grid place-items-center w-full h-full text-gray-600 hover:text-gray-50">
+            <button
+              className={`font-bold grid place-items-center w-full h-full text-gray-600 ${
+                activeSection === "about" ? "hover:text-gray-50" : ""
+              }`}
+              onClick={() => handleSectionClick("about")}
+            >
               <span className="p-2 px-4 border-b-4 border-transparent">
                 About
               </span>
             </button>
 
-            <button className="font-bold grid place-items-center w-full h-full text-gray-600 hover:text-gray-50">
+            <button
+              className={`font-bold grid place-items-center w-full h-full text-gray-600 ${
+                activeSection === "about" ? "hover:text-gray-50" : ""
+              }`}
+              onClick={() => handleSectionClick("work")}
+            >
               <span className="p-2 px-4 border-b-4 border-transparent">
                 Works
               </span>
@@ -121,7 +140,11 @@ const Home: NextPage = () => {
           </div>
         </div>
       </header>
-      <main></main>
+      <main>
+        {activeSection === "about" && <About />}
+        {activeSection === "work" && <Work />}
+        {/* {activeSection === "skills" && <Skills />} */}
+      </main>
       <footer className="w-[610px] max-w-full mx-auto py-8">
         <div className="w-full grid place-items-center gap-y-2">
           <div className="flex flex-wrap justify-center">
@@ -131,7 +154,7 @@ const Home: NextPage = () => {
               target="_blank"
               className="w-11 h-11 grid place-items-center rounded-md hover:bg-gray-700"
             >
-              <FaLinkedin size={20}/>
+              <FaLinkedin size={20} />
             </a>
             <a
               href="https://www.instagram.com/andrade_jaum/"
@@ -139,7 +162,7 @@ const Home: NextPage = () => {
               target="_blank"
               className="w-11 h-11 grid place-items-center rounded-md hover:bg-gray-700"
             >
-              <FaInstagram size={20}/>
+              <FaInstagram size={20} />
             </a>
             <a
               href="https://github.com/AndradeJaum"
@@ -147,7 +170,7 @@ const Home: NextPage = () => {
               target="_blank"
               className="w-11 h-11 grid place-items-center rounded-md hover:bg-gray-700"
             >
-              <FaGithub size={20}/>
+              <FaGithub size={20} />
             </a>
             <a
               href="https://open.spotify.com/user/4jsylrelyhxxzqb28vtyj19p4"
@@ -155,7 +178,7 @@ const Home: NextPage = () => {
               target="_blank"
               className="w-11 h-11 grid place-items-center rounded-md hover:bg-gray-700"
             >
-              <FaSpotify size={20}/>
+              <FaSpotify size={20} />
             </a>
           </div>
           <div>
