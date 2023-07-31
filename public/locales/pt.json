@@ -1,6 +1,50 @@
 {
-  "welcome": "Bem vindo ao meu site!",
-  "about": "Sobre",
-  "contact": "Contato",
-  "hello": "¡Olá, {{name}}!"
+  "download": "Baixar CV",
+  "country": "Brasil",
+  "status": "Disponível",
+  "birthday": "23 de setembro",
+  "pronoun": "Ele / dele",
+  "about": {
+    "title": "Sobre",
+    "p1": "Meu nome é João Vitor de Andrade, tenho 24 anos e me formei recentemente em Análise e Desenvolvimento de Sistemas pela Universidade Unopar no início de 2023.",
+    "p2": "Com paixão por aprender, utilizo meu tempo livre para me manter atualizado com as últimas tendências do setor e me dedico a criar pequenos projetos pessoais usando o que aprendi. Em minhas atividades de lazer, gosto de assistir séries, ler e tocar violão. Meu desejo de crescer profissionalmente me levou a mudar de área, passando de operador CNC para Designer Gráfico e, agora, para Desenvolvedor Full Stack."
+  },
+  "work": {
+    "title": "Experiência Profissional",
+    "experience": {
+      "title": "Experiência de Trabalho",
+      "w1": {
+        "date": "2023 - presente",
+        "title": "Freelancer Wordpress",
+        "function": "Criação e manutenção de websites, instalação de plugins e temas."
+      },
+      "w2": {
+        "date": "2021 - 2022",
+        "title": "Designer Gráfico",
+        "function": "Criação de logotipos, banners, panfletos, publicidade..."
+      }
+    },
+    "sideProjects": {
+      "title": "Projetos Pessoais",
+      "p1": {
+        "title": "Comunismo.io",
+        "description": "Um site estático, bonito, limpo e moderno sobre comunismo, socialismo e capitalismo."
+      },
+      "p2": {
+        "title": "Quiz",
+        "description": "Quiz, um jogo composto por um conjunto de perguntas e respostas de conhecimento geral. Quando o usuário inicia o jogo, 10 perguntas são sorteadas aleatoriamente para que eles respondam. Se eles responderem corretamente todas as 10 perguntas, a opção de inserir seu endereço de carteira existente aparece para receber um token do meu contrato."
+      },
+      "p3": {
+        "title": "StatusGG",
+        "description": "Um aplicativo em react.js que usa a API do jogo League of Legends para buscar informações personalizadas de jogadores e suas partidas. Salvando os 5 melhores jogadores de cada fila ranqueada."
+      },
+      "p4": {
+        "title": "Search Movie",
+        "description": "Meu primeiro aplicativo com React JS usando uma API, neste caso a API do IMDB, com a intenção de ser uma enciclopédia de filmes para receber informações sobre eles, como classificação, lançamento e sinopse."
+      }
+    }
+  },
+  "skill": {
+    "title": "Habilidades"
+  }
 }

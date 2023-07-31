@@ -17,6 +17,7 @@ import LanguageSwitcher from "../components/LanguageSwitcher.js";
 import { useState } from "react";
 import About from "../components/About.js";
 import Work from "../components/Work.js";
+import Skills from "../components/Skills.js";
 
 const Home: NextPage = () => {
   const [activeSection, setActiveSection] = useState("about");
@@ -37,13 +38,10 @@ const Home: NextPage = () => {
         </form>
         <div className="w-11 h-11 rounded-md flex items-center hover:bg-gray-700">
           <div className="hover:bg-gray-700 flex items-center gap-1 mx-auto">
-            {/* <FaGlobe size={20}/> */}
             <LanguageSwitcher />
           </div>
         </div>
       </nav>
-      <h1>{t("welcome")}</h1>
-      <p>{t("hello", { name: "John" })}</p>
       <header className="w-[724px] max-w-full mx-auto">
         <div className="w-full aspect-[3/1] bg-gray-700"></div>
         <div className="w-[610px] max-w-full mx-auto grid gap-2 px-4">
@@ -56,13 +54,12 @@ const Home: NextPage = () => {
               className="absolute top-0 transform -translate-y-1/2 left-0 rounded-full border-4"
             />
             <a
-              href="https://www.linkedin.com/in/joao-vitorandrade/"
-              title="Me siga no Linkedin"
+              href=""
+              title="Download CV"
               target="_blanc"
-              className="border-transparent outline-transparent rounded-full flex gap-x-1 items-center text-white px-4 py-2 bg-yellow-500"
+              className="border-transparent outline-transparent rounded-full flex gap-x-1 items-center text-white px-4 py-2 bg-emerald-700"
             >
-              <span className="font-bold">Follow</span>
-              <FaLinkedin size={20} />
+              <span className="font-bold">{t("download")}</span>
             </a>
           </div>
           <h1 className="font-bold text-4xl">João Vitor de Andrade</h1>
@@ -70,17 +67,21 @@ const Home: NextPage = () => {
           <span className="flex gap-x-4 items-center flex-wrap text-gray-600 text-base">
             <span className="flex items-center gap-1">
               <FaSuitcase />
-              <p className="whitespace-nowrap">Disponível</p>
+              <p className="whitespace-nowrap">{t("status")}</p>
+            </span>
+            <span className="flex items-center gap-1">
+              <FaGlobe />
+              <p className="whitespace-nowrap">{t("country")}</p>
             </span>
             <span className="flex items-center gap-1">
               <FaBirthdayCake />
-              <p className="whitespace-nowrap">23 de Setembro</p>
+              <p className="whitespace-nowrap">{t("birthday")}</p>
             </span>
             <span className="flex items-center gap-1">
               <FaUser />
-              <p className="whitespace-nowrap">Ele/dele</p>
+              <p className="whitespace-nowrap">{t("pronoun")}</p>
             </span>
-            <span className="flex items-center gap-1">
+            {/* <span className="flex items-center gap-1">
               <a
                 href="https://www.instagram.com/andrade_jaum/"
                 target="_blanc"
@@ -99,40 +100,50 @@ const Home: NextPage = () => {
                 <FaGithub />
                 <p className="whitespace-nowrap">GitHub</p>
               </a>
-            </span>
+            </span> */}
           </span>
         </div>
         <div className="w-[610px] max-w-full mx-auto my-12 text-base">
           <div className="max-w-full grid grid-flow-col auto-cols-[1fr] items-center text-gray-600">
             <button
-              className={`font-bold grid place-items-center w-full h-full text-gray-600 ${
-                activeSection === "about" ? "hover:text-gray-50" : ""
+              className={`font-bold grid place-items-center w-full h-full text-gray-600 hover:text-gray-50 ${
+                activeSection === "about" ? "text-gray-50" : ""
               }`}
               onClick={() => handleSectionClick("about")}
             >
               <span className="p-2 px-4 border-b-4 border-transparent">
-                About
+                {t("about.title")}
               </span>
             </button>
 
             <button
-              className={`font-bold grid place-items-center w-full h-full text-gray-600 ${
-                activeSection === "about" ? "hover:text-gray-50" : ""
+              className={`font-bold grid place-items-center w-full h-full text-gray-600 hover:text-gray-50 ${
+                activeSection === "work" ? "text-gray-50" : ""
               }`}
               onClick={() => handleSectionClick("work")}
             >
               <span className="p-2 px-4 border-b-4 border-transparent">
-                Works
+                {t("work.title")}
               </span>
             </button>
 
-            <button className="font-bold grid place-items-center w-full h-full text-gray-600 hover:text-gray-50">
+            <button
+              className={`font-bold grid place-items-center w-full h-full text-gray-600 hover:text-gray-50 ${
+                activeSection === "skills" ? "text-gray-50" : ""
+              }`}
+              onClick={() => handleSectionClick("skill")}
+            >
               <span className="p-2 px-4 border-b-4 border-transparent">
-                Skills
+                {t("skill.title")}
               </span>
             </button>
 
-            <button className="font-bold grid place-items-center w-full h-full text-gray-600">
+            <button
+              className={`font-bold grid place-items-center w-full h-full text-gray-600 hover:text-gray-50 hidden ${
+                activeSection === "comming" ? "text-gray-50" : ""
+              }`}
+              onClick={() => handleSectionClick("comming")}
+            >
               <span className="p-2 px-4 border-b-4 border-transparent">
                 Comming
               </span>
@@ -143,7 +154,7 @@ const Home: NextPage = () => {
       <main>
         {activeSection === "about" && <About />}
         {activeSection === "work" && <Work />}
-        {/* {activeSection === "skills" && <Skills />} */}
+        {activeSection === "skill" && <Skills />}
       </main>
       <footer className="w-[610px] max-w-full mx-auto py-8">
         <div className="w-full grid place-items-center gap-y-2">
