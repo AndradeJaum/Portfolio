@@ -35,7 +35,10 @@ const Home: NextPage = () => {
     <div className="container min-h-screen max-w-full">
       <nav className="flex justify-between p-2 sticky top-0 left-0 z-10 bg-background opacity-60 backdrop:blur-3xl">
         <form className="w-11 h-11 rounded-md flex items-center hover:bg-hover">
-          <button className="hover:bg-background flex items-center gap-1 mx-auto">
+          <button
+            name="Theme"
+            className="hover:bg-background flex items-center gap-1 mx-auto"
+          >
             <FaLightbulb size={20} />
           </button>
         </form>
@@ -46,7 +49,7 @@ const Home: NextPage = () => {
         </div>
       </nav>
       <header className="w-[724px] max-w-full mx-auto">
-        <div className="w-full aspect-[3/1] bg-background"></div>
+        <div className="w-full aspect-[3/1] bg-hover"></div>
         <div className="w-[610px] max-w-full mx-auto grid gap-2 px-4">
           <div className="relative flex justify-end items-center min-h-[90px] py-2">
             <Image
@@ -97,47 +100,43 @@ const Home: NextPage = () => {
         <div className="w-[610px] max-w-full mx-auto my-12 text-base">
           <div className="max-w-full grid grid-flow-col items-center text-Secondary whitespace-nowrap">
             <button
+              name={`${t("about.title")}`}
               className={`font-bold grid place-items-center w-full h-full hover:text-Primary ${
                 activeSection === "about" ? "text-Primary" : ""
               }`}
               onClick={() => handleSectionClick("about")}
             >
-              <span className="p-2 px-4">
-                {t("about.title")}
-              </span>
+              <span className="p-2 px-4">{t("about.title")}</span>
             </button>
 
             <button
+            name={`${t("work.title")}`}
               className={`font-bold grid place-items-center w-full h-full hover:text-Primary ${
                 activeSection === "work" ? "text-Primary" : ""
               }`}
               onClick={() => handleSectionClick("work")}
             >
-              <span className="p-2 px-4">
-                {t("work.title")}
-              </span>
+              <span className="p-2 px-4">{t("work.title")}</span>
             </button>
 
             <button
+            name={`${t("skill.title")}`}
               className={`font-bold grid place-items-center w-full h-full hover:text-Primary ${
                 activeSection === "skill" ? "text-Primary" : ""
               }`}
               onClick={() => handleSectionClick("skill")}
             >
-              <span className="p-2 px-4">
-                {t("skill.title")}
-              </span>
+              <span className="p-2 px-4">{t("skill.title")}</span>
             </button>
 
             <button
+            name={`${t("education.title")}`}
               className={`font-bold grid place-items-center w-full h-full hover:text-Primary ${
                 activeSection === "education" ? "text-Primary" : ""
               }`}
               onClick={() => handleSectionClick("education")}
             >
-              <span className="p-2 px-4">
-                {t("education.title")}
-              </span>
+              <span className="p-2 px-4">{t("education.title")}</span>
             </button>
           </div>
         </div>
@@ -153,7 +152,7 @@ const Home: NextPage = () => {
           <div className="flex flex-wrap justify-center">
             <a
               href="https://www.linkedin.com/in/joao-vitorandrade/"
-              title=""
+              title="Linkedin"
               target="_blank"
               className="w-11 h-11 grid place-items-center rounded-md hover:bg-hover"
             >
@@ -161,7 +160,7 @@ const Home: NextPage = () => {
             </a>
             <a
               href="https://www.instagram.com/andrade_jaum/"
-              title=""
+              title="Instagram"
               target="_blank"
               className="w-11 h-11 grid place-items-center rounded-md hover:bg-hover"
             >
@@ -169,7 +168,7 @@ const Home: NextPage = () => {
             </a>
             <a
               href="https://github.com/AndradeJaum"
-              title=""
+              title="GitHub"
               target="_blank"
               className="w-11 h-11 grid place-items-center rounded-md hover:bg-hover"
             >
@@ -177,7 +176,7 @@ const Home: NextPage = () => {
             </a>
             <a
               href="https://open.spotify.com/user/4jsylrelyhxxzqb28vtyj19p4"
-              title=""
+              title="Spotify"
               target="_blank"
               className="w-11 h-11 grid place-items-center rounded-md hover:bg-hover"
             >
