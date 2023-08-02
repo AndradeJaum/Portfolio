@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-// import Head from "next/head";
+import { NextSeo } from "next-seo";
 import Image from "next/image";
 import {
   FaSuitcase,
@@ -33,6 +33,10 @@ const Home: NextPage = () => {
 
   return (
     <div className="container min-h-screen max-w-full">
+      <NextSeo 
+      title={`${t("seo.title")}`}
+      description={`${t("seo.description")}`}
+      />
       <nav className="flex justify-between p-2 sticky top-0 left-0 z-10 bg-background opacity-60 backdrop:blur-3xl">
         <form className="w-11 h-11 rounded-md flex items-center hover:bg-hover">
           <button
