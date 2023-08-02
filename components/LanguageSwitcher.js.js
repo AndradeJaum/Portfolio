@@ -12,7 +12,7 @@ const LanguageSwitcher = () => {
       <select
         onChange={changeLanguage}
         value={i18n.language}
-        className="bg-transparent"
+        className="bg-background"
       >
         <option value="pt">Pt</option>
         <option value="es">Es</option>

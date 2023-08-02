@@ -4,17 +4,19 @@
   "status": "Avaliable",
   "birthday": "September 23th",
   "pronoun": "He / his",
+  "hobby": "Guitar",
+  "pet": "Dog",
   "about": {
     "title": "About",
     "p1": "My name is João Vitor de Andrade, I am 24 years old, and I recently graduated in System Analysis and Development from Unopar University in early 2023.",
     "p2": "With a passion for learning, I use my free time to stay updated with the latest industry trends and dedicate myself to creating small personal projects using what I have learned. In my leisure activities, I enjoy watching series, reading, and playing the guitar. My desire to grow professionally has led me to change fields from being a CNC operator to becoming a Graphic Designer and now a Full Stack Developer."
   },
   "work": {
-    "title": "Work",
+    "title": "Work Experience",
     "experience": {
       "title": "Work Experience",
       "w1": {
-        "date": "2023 - present",
+        "date": "2023 - Present",
         "title": "Wordpress Freelancer",
         "function": "Website creation, maintenance, installation of plugins, and themes."
       },
@@ -45,6 +47,29 @@
     }
   },
   "skill": {
-    "title": "Skill"
+    "title": "Techs"
+  },
+  "education": {
+    "title": "Education",
+    "university": {
+      "date": "2022 - 12- 10 - Conslusion",
+      "name": "Universidade Pitágoras Unopar Anhanguera",
+      "course": "Superior de Tecnologia em Análise e Desenvolvimento de Sistemas"
+    },
+    "languages": {
+      "title": "Languages",
+      "pt": {
+        "name": "Portuguese",
+        "level": "Native"
+      },
+      "es": {
+        "name": "Spanish",
+        "level": "Intermediary - Speak / read / write"
+      },
+      "en": {
+        "name": "English",
+        "level": "Intermediary - Read / write"
+      }
+    }
   }
 }

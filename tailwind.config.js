@@ -5,9 +5,13 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    // colors: {
-    //   yellow: "#FED600",
-    // },
+    colors: {
+      Primary: "#f9fafb",
+      Secondary: "#4b5563",
+      background: "#111827",
+      hover: "#374151",
+      contrast: "#047857"
+    },
     extend: {},
   },
   plugins: [],

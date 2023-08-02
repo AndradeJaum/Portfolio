@@ -15,7 +15,7 @@ const Work = () => {
           <div className="w-[65%] grid gap-2">
             <h3 className="text-xl">{t("work.experience.w1.title")}</h3>
             <p>{t("work.experience.w1.function")}</p>
-            <span className="text-gray-600 grid grid-flow-col ">
+            <span className="text-Secondary grid grid-flow-col ">
               <span>Wordpress</span>
               <span>Elementor Pro</span>
               <span>SEO</span>
@@ -32,7 +32,7 @@ const Work = () => {
           <div className="w-[65%] grid gap-2">
             <h3 className="text-xl">{t("work.experience.w2.title")}</h3>
             <p>{t("work.experience.w2.function")}</p>
-            <span className="text-gray-600 grid grid-flow-col">
+            <span className="text-Secondary grid grid-flow-col">
               <span>Photoshop</span>
               <span>Ilustrator</span>
               <span>Figma</span>
@@ -54,7 +54,7 @@ const Work = () => {
             />
             <h3 className="text-xl">{t("work.sideProjects.p1.title")}</h3>
             <p>{t("work.sideProjects.p1.description")}</p>
-            <span className="text-gray-600 grid grid-flow-col ">
+            <span className="text-Secondary grid grid-flow-col ">
               <span>Remix</span>
               <span>TS</span>
               <span>React</span>
@@ -75,11 +75,11 @@ const Work = () => {
             <a
               href="https://github.com/AndradeJaum/My-Back-End"
               target="_blank"
-              className="text-gray-600 hover:text-gray-50"
+              className="text-Secondary hover:text-Primary"
             >
               Backend
             </a>
-            <span className="text-gray-600 grid grid-flow-col">
+            <span className="text-Secondary grid grid-flow-col">
               <span>JS</span>
               <span>TS</span>
               <span>Next</span>
@@ -103,11 +103,11 @@ const Work = () => {
             <a
               href="https://github.com/AndradeJaum/My-Back-End"
               target="_blank"
-              className="text-gray-600 hover:text-gray-50"
+              className="text-Secondary hover:text-Primary"
             >
               Backend
             </a>
-            <span className="text-gray-600 grid grid-flow-col">
+            <span className="text-Secondary grid grid-flow-col">
               <span>JS</span>
               <span>React</span>
               <span>Material Ui</span>
@@ -124,7 +124,7 @@ const Work = () => {
             />
             <h3 className="text-xl">{t("work.sideProjects.p4.title")}</h3>
             <p>{t("work.sideProjects.p4.description")} </p>
-            <span className="text-gray-600 grid grid-flow-col">
+            <span className="text-Secondary grid grid-flow-col">
               <span>JS</span>
               <span>React</span>
               <span>Imdb Api</span>

@@ -3,7 +3,9 @@
   "country": "Brasil",
   "status": "Disponível",
   "birthday": "23 de setembro",
-  "pronoun": "Ele / dele",
+  "pronoun": "Ele / seu",
+  "hobby": "Violão",
+  "pet": "Cachorro",
   "about": {
     "title": "Sobre",
     "p1": "Meu nome é João Vitor de Andrade, tenho 24 anos e me formei recentemente em Análise e Desenvolvimento de Sistemas pela Universidade Unopar no início de 2023.",
@@ -14,7 +16,7 @@
     "experience": {
       "title": "Experiência de Trabalho",
       "w1": {
-        "date": "2023 - presente",
+        "date": "2023 - Presente",
         "title": "Freelancer Wordpress",
         "function": "Criação e manutenção de websites, instalação de plugins e temas."
       },
@@ -32,19 +34,42 @@
       },
       "p2": {
         "title": "Quiz",
-        "description": "Quiz, um jogo composto por um conjunto de perguntas e respostas de conhecimento geral. Quando o usuário inicia o jogo, 10 perguntas são sorteadas aleatoriamente para que eles respondam. Se eles responderem corretamente todas as 10 perguntas, a opção de inserir seu endereço de carteira existente aparece para receber um token do meu contrato."
+        "description": "Quiz, um jogo composto por um conjunto de perguntas e respostas de conhecimento geral. Quando o usuário inicia o jogo, 10 perguntas são sorteadas aleatoriamente para que eles respondam. Se eles responderem corretamente a todas as 10 perguntas, a opção de inserir seu endereço de carteira existente aparece para receber um token do meu contrato."
       },
       "p3": {
         "title": "StatusGG",
-        "description": "Um aplicativo em react.js que usa a API do jogo League of Legends para buscar informações personalizadas de jogadores e suas partidas. Salvando os 5 melhores jogadores de cada fila ranqueada."
+        "description": "Um aplicativo em react.js que utiliza a API do jogo League of Legends para buscar informações personalizadas de jogadores e suas partidas. Salvando os 5 melhores jogadores de cada fila ranqueada."
       },
       "p4": {
         "title": "Search Movie",
-        "description": "Meu primeiro aplicativo com React JS usando uma API, neste caso a API do IMDB, com a intenção de ser uma enciclopédia de filmes para receber informações sobre eles, como classificação, lançamento e sinopse."
+        "description": "Minha primeira aplicação com React JS usando uma API, neste caso a API do IMDB, com a intenção de ser uma enciclopédia de filmes para receber informações sobre eles, como classificação, data de lançamento e sinopse."
       }
     }
   },
   "skill": {
-    "title": "Habilidades"
+    "title": "Tecnologias"
+  },
+  "education": {
+    "title": "Educação",
+    "university": {
+      "date": "2022 - 10 - 12 - Conclusão",
+      "name": "Universidade Pitágoras Unopar Anhanguera",
+      "course": "Superior de Tecnologia em Análise e Desenvolvimento de Sistemas"
+    },
+    "languages": {
+      "title": "Idiomas",
+      "pt": {
+        "name": "Português",
+        "level": "Nativo"
+      },
+      "es": {
+        "name": "Espanhol",
+        "level": "Intermediário - Fala / leitura / escrita"
+      },
+      "en": {
+        "name": "Inglês",
+        "level": "Intermediário - Leitura / escrita"
+      }
+    }
   }
 }
