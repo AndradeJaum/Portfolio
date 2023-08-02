@@ -40,7 +40,7 @@ const Home: NextPage = () => {
       <nav className="flex justify-between p-2 sticky top-0 left-0 z-10 bg-background opacity-60 backdrop:blur-3xl">
         <form className="w-11 h-11 rounded-md flex items-center hover:bg-hover">
           <button
-            name="Theme"
+            name="Trade Theme"
             className="hover:bg-background flex items-center gap-1 mx-auto"
           >
             <FaLightbulb size={20} />
