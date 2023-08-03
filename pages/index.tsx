@@ -21,6 +21,7 @@ import About from "../components/About.js";
 import Work from "../components/Work.js";
 import Skills from "../components/Skills.js";
 import Education from "../components/Education.js";
+import ThemeSwitcher from "../components/ThemeSwitcher.js";
 
 const Home: NextPage = () => {
   const [activeSection, setActiveSection] = useState("about");
@@ -32,22 +33,17 @@ const Home: NextPage = () => {
   };
 
   return (
-    <div className="container min-h-screen max-w-full">
-      <NextSeo 
-      title={`${t("seo.title")}`}
-      description={`${t("seo.description")}`}
+    <div className="container min-h-screen max-w-full dark:bg-bgDark">
+      <NextSeo
+        title={`${t("seo.title")}`}
+        description={`${t("seo.description")}`}
       />
-      <nav className="flex justify-between p-2 sticky top-0 left-0 z-10 bg-background opacity-60 backdrop:blur-3xl">
-        <form className="w-11 h-11 rounded-md flex items-center hover:bg-hover">
-          <button
-            name="Trade Theme"
-            className="hover:bg-background flex items-center gap-1 mx-auto"
-          >
-            <FaLightbulb size={20} />
-          </button>
-        </form>
-        <div className="w-11 h-11 rounded-md flex items-center hover:bg-background">
-          <div className="hover:bg-background flex items-center gap-1 mx-auto">
+      <nav className="flex justify-between p-2 sticky top-0 left-0 z-10 bg-bgDark opacity-60 backdrop:blur-3xl">
+        <div>
+          <ThemeSwitcher />
+        </div>
+        <div className="w-11 h-11 rounded-md flex items-center hover:bg-bgDark">
+          <div className="hover:bg-bgDark flex items-center gap-1 mx-auto">
             <LanguageSwitcher />
           </div>
         </div>
@@ -67,46 +63,46 @@ const Home: NextPage = () => {
               href="/download/cv.pdf"
               title="Download CV"
               download
-              className="border-transparent outline-transparent rounded-full flex gap-x-1 items-center text-Primary px-4 py-2 bg-contrast"
+              className="border-transparent outline-transparent rounded-full flex gap-x-1 items-center text-textDark px-4 py-2 bg-contrast"
             >
               <span className="font-bold">{t("download")}</span>
             </a>
           </div>
           <h1 className="font-bold text-4xl">João Vitor de Andrade</h1>
           <p className="mb-2 text-base">Full Stack Developer Junior ✨</p>
-          <span className="flex gap-x-2 items-center flex-wrap text-Secondary text-base">
-            <span className="flex items-center gap-1 hover:text-Primary">
+          <span className="flex gap-x-2 items-center flex-wrap text-textSecond font-medium text-base">
+            <span className="flex items-center gap-1 hover:text-textLight dark:hover:text-textDark">
               <FaSuitcase />
               <p className="whitespace-nowrap">{t("status")}</p>
             </span>
-            <span className="flex items-center gap-1 hover:text-Primary">
+            <span className="flex items-center gap-1 hover:text-textLight dark:hover:text-textDark">
               <FaGlobe />
               <p className="whitespace-nowrap">{t("country")}</p>
             </span>
-            <span className="flex items-center gap-1 hover:text-Primary">
+            <span className="flex items-center gap-1 hover:text-textLight dark:hover:text-textDark">
               <FaBirthdayCake />
               <p className="whitespace-nowrap">{t("birthday")}</p>
             </span>
-            <span className="flex items-center gap-1 hover:text-Primary">
+            <span className="flex items-center gap-1 hover:text-textLight dark:hover:text-textDark">
               <FaUser />
               <p className="whitespace-nowrap">{t("pronoun")}</p>
             </span>
-            <span className="flex items-center gap-1 hover:text-Primary">
+            <span className="flex items-center gap-1 hover:text-textLight dark:hover:text-textDark">
               <FaGuitar />
               <p className="whitespace-nowrap">{t("hobby")}</p>
             </span>
-            <span className="flex items-center gap-1 hover:text-Primary">
+            <span className="flex items-center gap-1 hover:text-textLight dark:hover:text-textDark">
               <FaDog />
               <p className="whitespace-nowrap">{t("pet")}</p>
             </span>
           </span>
         </div>
         <div className="w-[610px] max-w-full mx-auto my-12 text-base">
-          <div className="max-w-full grid grid-flow-col items-center text-Secondary whitespace-nowrap">
+          <div className="max-w-full grid grid-flow-col items-center text-textSecond whitespace-nowrap">
             <button
               name={`${t("about.title")}`}
-              className={`font-bold grid place-items-center w-full h-full hover:text-Primary ${
-                activeSection === "about" ? "text-Primary" : ""
+              className={`font-bold grid place-items-center w-full h-full hover:text-textLight dark:hover:text-textDark ${
+                activeSection === "about" ? "dark:text-textDark" : ""
               }`}
               onClick={() => handleSectionClick("about")}
             >
@@ -114,9 +110,9 @@ const Home: NextPage = () => {
             </button>
 
             <button
-            name={`${t("work.title")}`}
-              className={`font-bold grid place-items-center w-full h-full hover:text-Primary ${
-                activeSection === "work" ? "text-Primary" : ""
+              name={`${t("work.title")}`}
+              className={`font-bold grid place-items-center w-full h-full hover:text-textLight dark:hover:text-textDark ${
+                activeSection === "work" ? "dark:text-textDark" : ""
               }`}
               onClick={() => handleSectionClick("work")}
             >
@@ -124,9 +120,9 @@ const Home: NextPage = () => {
             </button>
 
             <button
-            name={`${t("skill.title")}`}
-              className={`font-bold grid place-items-center w-full h-full hover:text-Primary ${
-                activeSection === "skill" ? "text-Primary" : ""
+              name={`${t("skill.title")}`}
+              className={`font-bold grid place-items-center w-full h-full hover:text-textLight dark:hover:text-textDark ${
+                activeSection === "skill" ? "dark:text-textDark" : ""
               }`}
               onClick={() => handleSectionClick("skill")}
             >
@@ -134,9 +130,9 @@ const Home: NextPage = () => {
             </button>
 
             <button
-            name={`${t("education.title")}`}
-              className={`font-bold grid place-items-center w-full h-full hover:text-Primary ${
-                activeSection === "education" ? "text-Primary" : ""
+              name={`${t("education.title")}`}
+              className={`font-bold grid place-items-center w-full h-full hover:text-textLight dark:hover:text-textDark ${
+                activeSection === "education" ? "dark:text-textDark" : ""
               }`}
               onClick={() => handleSectionClick("education")}
             >

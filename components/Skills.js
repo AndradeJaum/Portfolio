@@ -5,7 +5,7 @@ const Skills = () => {
   return (
     <div className="w-[610px] max-w-full mx-auto px-4">
       <div className="grid gap-4 mb-12">
-        <h2 className="text-xl mb-4">{t("skill.title")}</h2>
+        <h2 className="text-xl font-bold mb-4">{t("skill.title")}</h2>
         <div className="w-full flex text-center">
           <div className="w-full grid gap-2">
             <p>Javascript</p>

@@ -1,0 +1,62 @@
+# Query: Primary
+# ContextLines: 1
+
+17 results - 2 files
+
+components/Work.js:
+   77                target="_blank"
+   78:               className="text-Secondary dark:hover:text-textDark hover:text-gray950"
+   79              >
+
+  105                target="_blank"
+  106:               className="text-Secondary dark:hover:text-Primary hover:text-gray950"
+  107              >
+
+pages/index.tsx:
+   65                download
+   66:               className="border-transparent outline-transparent rounded-full flex gap-x-1 items-center text-Primary px-4 py-2 bg-contrast"
+   67              >
+
+   73            <span className="flex gap-x-2 items-center flex-wrap text-Secondary font-medium text-base">
+   74:             <span className="flex items-center gap-1 hover:text-gray950 dark:hover:text-Primary">
+   75                <FaSuitcase />
+
+   77              </span>
+   78:             <span className="flex items-center gap-1 hover:text-gray950 dark:hover:text-Primary">
+   79                <FaGlobe />
+
+   81              </span>
+   82:             <span className="flex items-center gap-1 hover:text-gray950 dark:hover:text-Primary">
+   83                <FaBirthdayCake />
+
+   85              </span>
+   86:             <span className="flex items-center gap-1 hover:text-gray950 dark:hover:text-Primary">
+   87                <FaUser />
+
+   89              </span>
+   90:             <span className="flex items-center gap-1 hover:text-gray950 dark:hover:text-Primary">
+   91                <FaGuitar />
+
+   93              </span>
+   94:             <span className="flex items-center gap-1 hover:text-gray950 dark:hover:text-Primary">
+   95                <FaDog />
+
+  103                name={`${t("about.title")}`}
+  104:               className={`font-bold grid place-items-center w-full h-full hover:text-gray950 dark:hover:text-Primary ${
+  105:                 activeSection === "about" ? "dark:text-Primary" : ""
+  106                }`}
+
+  113                name={`${t("work.title")}`}
+  114:               className={`font-bold grid place-items-center w-full h-full hover:text-gray950 dark:hover:text-Primary ${
+  115:                 activeSection === "work" ? "dark:text-Primary" : ""
+  116                }`}
+
+  123                name={`${t("skill.title")}`}
+  124:               className={`font-bold grid place-items-center w-full h-full hover:text-gray950 dark:hover:text-Primary ${
+  125:                 activeSection === "skill" ? "dark:text-Primary" : ""
+  126                }`}
+
+  133                name={`${t("education.title")}`}
+  134:               className={`font-bold grid place-items-center w-full h-full hover:text-gray950 dark:hover:text-Primary ${
+  135:                 activeSection === "education" ? "dark:text-Primary" : ""
+  136                }`}

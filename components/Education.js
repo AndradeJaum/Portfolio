@@ -5,7 +5,7 @@ const Education = () => {
   return (
     <div className="w-[610px] max-w-full mx-auto px-4">
       <div className="grid gap-4 mb-12">
-        <h2 className="text-xl mb-4">{t("education.title")}</h2>
+        <h2 className="text-xl font-bold mb-4">{t("education.title")}</h2>
         <div className="w-full flex justify-between mb-12">
           <div className="w-[30%]">
             <p>{t("education.university.date")}</p>
@@ -17,7 +17,7 @@ const Education = () => {
         </div>
       </div>
       <div className="grid gap-4 mb-12">
-        <h2 className="text-xl mb-4">{t("education.languages.title")}</h2>
+        <h2 className="text-xl font-bold mb-4">{t("education.languages.title")}</h2>
         <div className="w-full flex justify-between">
           <div className="w-[30%]">
             <p>{t("education.languages.pt.name")}</p>

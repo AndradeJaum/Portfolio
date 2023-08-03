@@ -1,12 +1,15 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { I18nextProvider } from "react-i18next";
+import { ThemeProvider } from "next-themes";
 import i18n from "../i18n";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <I18nextProvider i18n={i18n}>
-      <Component {...pageProps} />
+      <ThemeProvider attribute="class">
+        <Component {...pageProps} />
+      </ThemeProvider>
     </I18nextProvider>
   );
 }

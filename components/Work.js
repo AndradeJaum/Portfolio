@@ -6,7 +6,7 @@ const Work = () => {
   return (
     <div className="w-[610px] max-w-full mx-auto px-4">
       <div className="">
-        <h2 className="text-xl mb-12">{t("work.experience.title")}</h2>
+        <h2 className="text-xl font-bold mb-12">{t("work.experience.title")}</h2>
 
         <div className="w-full flex justify-between mb-12">
           <div className="w-[30%]">
@@ -15,7 +15,7 @@ const Work = () => {
           <div className="w-[65%] grid gap-2">
             <h3 className="text-xl">{t("work.experience.w1.title")}</h3>
             <p>{t("work.experience.w1.function")}</p>
-            <span className="text-Secondary grid grid-flow-col ">
+            <span className="text-textSecond grid grid-flow-col ">
               <span>Wordpress</span>
               <span>Elementor Pro</span>
               <span>SEO</span>
@@ -32,7 +32,7 @@ const Work = () => {
           <div className="w-[65%] grid gap-2">
             <h3 className="text-xl">{t("work.experience.w2.title")}</h3>
             <p>{t("work.experience.w2.function")}</p>
-            <span className="text-Secondary grid grid-flow-col">
+            <span className="text-textSecond grid grid-flow-col">
               <span>Photoshop</span>
               <span>Ilustrator</span>
               <span>Figma</span>
@@ -42,7 +42,7 @@ const Work = () => {
       </div>
 
       <div>
-        <h2 className="text-xl mb-12">{t("work.sideProjects.title")}</h2>
+        <h2 className="text-xl font-bold mb-12">{t("work.sideProjects.title")}</h2>
         <div className="w-full flex justify-between mb-12">
           <div className="w-[47%] grid gap-2">
             <Image
@@ -54,7 +54,7 @@ const Work = () => {
             />
             <h3 className="text-xl">{t("work.sideProjects.p1.title")}</h3>
             <p>{t("work.sideProjects.p1.description")}</p>
-            <span className="text-Secondary grid grid-flow-col ">
+            <span className="text-textSecond grid grid-flow-col ">
               <span>Remix</span>
               <span>TS</span>
               <span>React</span>
@@ -75,11 +75,11 @@ const Work = () => {
             <a
               href="https://github.com/AndradeJaum/My-Back-End"
               target="_blank"
-              className="text-Secondary hover:text-Primary"
+              className="text-textSecond dark:hover:text-textDark hover:text-textLight"
             >
               Backend
             </a>
-            <span className="text-Secondary grid grid-flow-col">
+            <span className="text-textSecond grid grid-flow-col">
               <span>JS</span>
               <span>TS</span>
               <span>Next</span>
@@ -103,11 +103,11 @@ const Work = () => {
             <a
               href="https://github.com/AndradeJaum/My-Back-End"
               target="_blank"
-              className="text-Secondary hover:text-Primary"
+              className="text-textSecond dark:hover:text-textDark hover:text-textLight"
             >
               Backend
             </a>
-            <span className="text-Secondary grid grid-flow-col">
+            <span className="text-textSecond grid grid-flow-col">
               <span>JS</span>
               <span>React</span>
               <span>Material Ui</span>
@@ -124,7 +124,7 @@ const Work = () => {
             />
             <h3 className="text-xl">{t("work.sideProjects.p4.title")}</h3>
             <p>{t("work.sideProjects.p4.description")} </p>
-            <span className="text-Secondary grid grid-flow-col">
+            <span className="text-textSecond grid grid-flow-col">
               <span>JS</span>
               <span>React</span>
               <span>Imdb Api</span>
