@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import { NextSeo } from "next-seo";
 import Image from "next/image";
+import { useTheme } from "next-themes";
 import {
   FaSuitcase,
   FaBirthdayCake,
@@ -9,27 +10,32 @@ import {
   FaInstagram,
   FaGithub,
   FaGlobe,
-  FaLightbulb,
   FaSpotify,
   FaGuitar,
   FaDog,
 } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
-import LanguageSwitcher from "../components/LanguageSwitcher.js";
 import { useState } from "react";
-import About from "../components/About.js";
-import Work from "../components/Work.js";
-import Skills from "../components/Skills.js";
-import Education from "../components/Education.js";
-import ThemeSwitcher from "../components/ThemeSwitcher.js";
+import About from "../components/About";
+import Work from "../components/Work";
+import Skills from "../components/Skills";
+import Education from "../components/Education";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import LanguageSwitcher from "../components/LanguageSwitcher";
+import ThemeSwitcher from "../components/ThemeSwitcher";
 
 const Home: NextPage = () => {
   const [activeSection, setActiveSection] = useState("about");
+  const { theme, setTheme } = useTheme();
 
   const { t } = useTranslation();
 
   const handleSectionClick = (section: string) => {
     setActiveSection(section);
+  };
+
+  const handleThemeChange = () => {
+    setTheme(theme === "light" ? "dark" : "light");
   };
 
   return (
@@ -38,15 +44,13 @@ const Home: NextPage = () => {
         title={`${t("seo.title")}`}
         description={`${t("seo.description")}`}
       />
-      <nav className="flex justify-between p-2 sticky top-0 left-0 z-10 bg-bgDark opacity-60 backdrop:blur-3xl">
-        <div>
-          <ThemeSwitcher />
-        </div>
-        <div className="w-11 h-11 rounded-md flex items-center hover:bg-bgDark">
-          <div className="hover:bg-bgDark flex items-center gap-1 mx-auto">
-            <LanguageSwitcher />
-          </div>
-        </div>
+      <nav className="flex justify-between p-2 sticky z-10 top-0 left-0 bg-black bg-opacity-90 backdrop-blur-sm dark:bg-bgDark dark:bg-opacity-60">
+        <FormControlLabel
+          control={<ThemeSwitcher sx={{ m: 1 }} defaultChecked />}
+          label=""
+          onChange={handleThemeChange}
+        />
+        <LanguageSwitcher />
       </nav>
       <header className="w-[724px] max-w-full mx-auto">
         <div className="w-full aspect-[3/1] bg-hover"></div>
@@ -193,3 +197,6 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+function useEffect(arg0: () => void, arg1: never[]) {
+  throw new Error("Function not implemented.");
+}

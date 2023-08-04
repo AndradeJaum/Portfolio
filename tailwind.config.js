@@ -13,6 +13,7 @@ module.exports = {
       bgDark: "#111827",
       hover: "#374151",
       contrast: "#047857",
+      black: "#000"
     },
     extend: {},
   },
