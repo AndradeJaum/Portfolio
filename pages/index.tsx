@@ -52,7 +52,7 @@ const Home: NextPage = () => {
         />
         <LanguageSwitcher />
       </nav>
-      <header className="w-[724px] max-w-full mx-auto">
+      <header className="sm:w w-[724px] max-w-full mx-auto ">
         <div className="w-full aspect-[3/1] bg-hover"></div>
         <div className="w-[610px] max-w-full mx-auto grid gap-2 px-4">
           <div className="relative flex justify-end items-center min-h-[90px] py-2">
@@ -72,7 +72,7 @@ const Home: NextPage = () => {
               <span className="font-bold">{t("download")}</span>
             </a>
           </div>
-          <h1 className="font-bold text-4xl">João Vitor de Andrade</h1>
+          <h1 className=" font-bold text-4xl">João Vitor de Andrade</h1>
           <p className="mb-2 text-base">Full Stack Developer Junior ✨</p>
           <span className="flex gap-x-2 items-center flex-wrap text-textSecond font-medium text-base">
             <span className="flex items-center gap-1 hover:text-textLight dark:hover:text-textDark">
@@ -102,10 +102,10 @@ const Home: NextPage = () => {
           </span>
         </div>
         <div className="w-[610px] max-w-full mx-auto my-12 text-base">
-          <div className="max-w-full grid grid-flow-col items-center text-textSecond whitespace-nowrap">
+          <div className="flex flex-col items-center flex-wrap sm:flex-row text-textSecond ">
             <button
               name={`${t("about.title")}`}
-              className={`font-bold grid place-items-center w-full h-full hover:text-textLight dark:hover:text-textDark ${
+              className={`font-bold flex items-center hover:text-textLight dark:hover:text-textDark ${
                 activeSection === "about" ? "dark:text-textDark" : ""
               }`}
               onClick={() => handleSectionClick("about")}
@@ -115,7 +115,7 @@ const Home: NextPage = () => {
 
             <button
               name={`${t("work.title")}`}
-              className={`font-bold grid place-items-center w-full h-full hover:text-textLight dark:hover:text-textDark ${
+              className={`font-bold flex items-center hover:text-textLight dark:hover:text-textDark ${
                 activeSection === "work" ? "dark:text-textDark" : ""
               }`}
               onClick={() => handleSectionClick("work")}
@@ -125,7 +125,7 @@ const Home: NextPage = () => {
 
             <button
               name={`${t("skill.title")}`}
-              className={`font-bold grid place-items-center w-full h-full hover:text-textLight dark:hover:text-textDark ${
+              className={`font-bold flex items-center hover:text-textLight dark:hover:text-textDark ${
                 activeSection === "skill" ? "dark:text-textDark" : ""
               }`}
               onClick={() => handleSectionClick("skill")}
@@ -135,7 +135,7 @@ const Home: NextPage = () => {
 
             <button
               name={`${t("education.title")}`}
-              className={`font-bold grid place-items-center w-full h-full hover:text-textLight dark:hover:text-textDark ${
+              className={`font-bold flex items-center hover:text-textLight dark:hover:text-textDark ${
                 activeSection === "education" ? "dark:text-textDark" : ""
               }`}
               onClick={() => handleSectionClick("education")}
